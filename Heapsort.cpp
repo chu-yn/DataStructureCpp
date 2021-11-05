@@ -25,17 +25,10 @@ void swap(int &i, int &j)
 
 void heapify(int *iarr, int n, int i)
 {
-    int dad = i;
-    int son = dad * 2;
-    while (son <= n) { 
-        if (son + 1 <= n && iarr[son] < iarr[son + 1])
-            son++;
-        if (iarr[dad] > iarr[son])
-            return;
-        else {
-            swap(iarr[dad], iarr[son]);
-            dad = son;
-            son = dad * 2 + 1;
-        }
-    }
+    int j = i * 2; // left
+    int k = j + 1; // right
+    if (j <= n && iarr[i] < iarr[j])
+        swap(iarr[i], iarr[j]);
+    if (k <= n && iarr[i] < iarr[k])
+        swap(iarr[i], iarr[k]);
 }
