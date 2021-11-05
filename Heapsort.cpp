@@ -8,6 +8,12 @@ int main()
 {
     int arry[] = {0, 23, 65, 8, 29, 99, 9};
     bool isheaptree = false;
+
+    cout << "Origin:" << endl;
+    for (int i = 1; i <= 6; i++)
+    {
+        cout << arry[i] << endl;
+    }
     while (!isheaptree)
     {
         for (int i = 3; i >= 1; i--)
@@ -17,6 +23,7 @@ int main()
         isheaptree = checkheaptree(arry, 6);
     }
 
+    cout << "heaptree:" << endl;
     for (int i = 1; i <= 6; i++)
     {
         cout << arry[i] << endl;
@@ -46,8 +53,7 @@ void heapify(int *iarr, int n, int i)
 bool checkheaptree(int *iarr, int n)
 {
     int i = 1;
-    int left = 2 * i;
-    int right = left + 1;
+
     while (i <= n)
     {
         if (left <= n && iarr[i] < iarr[left])
