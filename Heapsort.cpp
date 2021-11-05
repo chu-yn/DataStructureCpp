@@ -52,18 +52,13 @@ void heapify(int *iarr, int n, int i)
 
 bool checkheaptree(int *iarr, int n)
 {
-    int i = 1;
-    int left = 2 * i;
-    int right = left + 1;
-    while (i <= n)
-    {
+    for (int i = 1; i <= n;i++){
+        int left = 2 * i;
+        int right = left + 1;
         if (left <= n && iarr[i] < iarr[left])
             return false;
         if (right <= n && iarr[i] < iarr[right])
             return false;
-        i++;
-        left = 2 * i;
-        right = left + 1;
     }
     return true;
 }
