@@ -2,12 +2,22 @@
 using namespace std;
 void swap(int &i, int &j);
 void heapify(int *iarr, int n, int i);
+bool checkheaptree(int *iarr, int n);
 
 int main()
 {
-    int arry[] = {0, 23, 65, 99};
-    heapify(arry, 3, 1);
-    for (int i = 1; i <= 3; i++)
+    int arry[] = {0, 23, 65, 8, 29, 99, 9};
+    bool isheaptree = false;
+    while (!isheaptree)
+    {
+        for (int i = 3; i >= 1; i--)
+        {
+            heapify(arry, 6, i);
+        }
+        isheaptree = checkheaptree(arry, 6);
+    }
+
+    for (int i = 1; i <= 6; i++)
     {
         cout << arry[i] << endl;
     }
@@ -31,4 +41,22 @@ void heapify(int *iarr, int n, int i)
         swap(iarr[i], iarr[j]);
     if (k <= n && iarr[i] < iarr[k])
         swap(iarr[i], iarr[k]);
+}
+
+bool checkheaptree(int *iarr, int n)
+{
+    int i = 1;
+    int left = 2 * i;
+    int right = left + 1;
+    while (i <= n)
+    {
+        if (left <= n && iarr[i] < iarr[left])
+            return false;
+        if (right <= n && iarr[i] < iarr[right])
+            return false;
+        i++;
+        left = 2 * i;
+        right = left + 1;
+    }
+    return true;
 }
