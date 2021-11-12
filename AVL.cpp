@@ -47,9 +47,27 @@ public:
  */
 int main()
 {
-    int choice, item;
+    // int choice, item;
+    int arry[] = {93, 76, 21, 33, 56, 43, 29, 171};
     avlTree avl;
-    while (1)
+    for (int item : arry)
+    {
+        root = avl.insert(root, item);
+    }
+    cout << "Balanced AVL Tree:" << endl;
+    avl.display(root, 1);
+    cout << endl;
+    cout << "Inorder Traversal:" << endl;
+    avl.inorder(root);
+    cout << endl;
+    cout << "Preorder Traversal:" << endl;
+    avl.preorder(root);
+    cout << endl;
+    cout << "Postorder Traversal:" << endl;
+    avl.postorder(root);
+    cout << endl;
+
+    /* while (1)
     {
         cout << "\n---------------------" << endl;
         cout << "AVL Tree Implementation" << endl;
@@ -99,7 +117,7 @@ int main()
         default:
             cout << "Wrong Choice" << endl;
         }
-    }
+    } */
     return 0;
 }
 
