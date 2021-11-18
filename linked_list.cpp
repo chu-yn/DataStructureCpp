@@ -29,7 +29,7 @@ public:
             p = p->next;
 
         p->next = Node;
-    };
+    }
     
     void deque()
     {
@@ -44,7 +44,7 @@ public:
         prev->next = current->next;
         cout << current->data << endl;
         delete current;
-    };
+    }
 };
 
 class stack1
