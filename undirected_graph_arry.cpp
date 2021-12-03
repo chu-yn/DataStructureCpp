@@ -20,29 +20,22 @@ int main(void)
                        {5, 4}};
 
     for (int i = 1; i < 6; i++)
-    {
         for (int j = 1; j < 6; j++)
-        {
             arr[i][j] = 0;
-        }
-    }
 
     for (int i = 0; i < 14; i++)
         arr[data[i][0]][data[i][1]] = 1;
 
     cout << "輸出無向圖" << endl;
+    cout << " ";
     for (int i = 1; i < 6; i++)
-    {
         cout << "  " << i;
-    }
     cout << endl;
     for (int i = 1; i < 6; i++)
     {
-        cout << i << "";
+        cout << i << " ";
         for (int j = 1; j < 6; j++)
-        {
             cout << "[" << arr[i][j] << "]";
-        }
         cout << endl;
     }
 
