@@ -45,6 +45,7 @@ int main(void)
                 cout << "[" << newnode->val << "]";
             }
         }
+        cout << endl;
     }
     return 0;
 }
