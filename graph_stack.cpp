@@ -5,12 +5,16 @@ class list
 public:
     int val;
     list *next;
-    list() { next = NULL; }
+    list() { next = nullptr; }
 };
+
+class list head[6];
+void dfs(int);
+int run[6];
 
 int main(void)
 {
-    list head[6];
+    // list head[6];
     list *ptr;
     list *newnode;
     int data[14][2] = {{1, 2},
@@ -30,6 +34,7 @@ int main(void)
     cout << "list content" << endl;
     for (int i = 1; i < 6; i++)
     {
+        run[i] = 0;
         head[i].val = i;
         cout << "top " << i << "=>";
         ptr = &(head[i]);
@@ -39,7 +44,7 @@ int main(void)
             {
                 newnode = new list;
                 newnode->val = data[j][1];
-                while (ptr->next != NULL)
+                while (ptr->next != nullptr)
                     ptr = ptr->next;
                 ptr->next = newnode;
                 cout << "[" << newnode->val << "]";
@@ -47,5 +52,22 @@ int main(void)
         }
         cout << endl;
     }
+    cout << "DFS:" << endl;
+    dfs(1);
+    cout << endl;
     return 0;
+}
+
+void dfs(int current)
+{
+    list *ptr;
+    run[current] = 1;
+    cout << "[" << current << "]";
+    ptr = head[current].next;
+    while (ptr != nullptr)
+    {
+        if (run[ptr->val] == 0)
+            dfs(ptr->val);
+        ptr = ptr->next;
+    }
 }
