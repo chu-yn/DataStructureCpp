@@ -57,3 +57,34 @@ int main(void)
 
     return 0;
 }
+
+void mintree(node *head)
+{
+    node *ptr, *mceptr;
+    int result = 0;
+    ptr = head;
+    for (int i = 0; i <= VERTS; i++)
+        v[i] = 0;
+
+    while (ptr != nullptr)
+    {
+        mceptr = findmincost(head);
+        v[mceptr->from]++;
+        v[mceptr->to]++;
+        if (v[mceptr->from] > 1 && v[mceptr->to] > 1)
+        {
+            v[mceptr->from]--;
+            v[mceptr->to]--;
+            result = 1;
+        }
+        else
+        {
+            result = 0;
+        }
+        if (result = 0)
+            cout << "Top [" << mceptr->from << "]\tEnd ["
+                 << mceptr->to << "]\tPath [" << mceptr->val << "]" << endl;
+
+        ptr = ptr->next;
+    }
+}
