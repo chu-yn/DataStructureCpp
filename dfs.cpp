@@ -8,9 +8,9 @@ public:
     list() { next = nullptr; }
 };
 
-class list head[6];
+class list head[7];
 void dfs(int);
-int run[6];
+int run[7];
 
 int main(void)
 {
