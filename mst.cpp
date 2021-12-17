@@ -58,6 +58,24 @@ int main(void)
     return 0;
 }
 
+node *findmincost(node *head)
+{
+    int minval = 100;
+    node *ptr, *retptr;
+    ptr = head;
+    while (ptr != nullptr)
+    {
+        if (ptr->val < minval && ptr->find == 0)
+        {
+            minval = ptr->val;
+            retptr = ptr;
+        }
+        ptr = ptr->next;
+    }
+    retptr->find = 1;
+    return retptr;
+}
+
 void mintree(node *head)
 {
     node *ptr, *mceptr;
