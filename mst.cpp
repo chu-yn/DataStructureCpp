@@ -50,7 +50,7 @@ int main(void)
     ptr = head;
     while (ptr != nullptr)
     {
-        cout << "Top [" << ptr->from << "] \t End [" << ptr->to
+        cout << "Top [" << ptr->from << "]\tEnd [" << ptr->to
              << "]\tPath [" << ptr->val << "]" << endl;
         ptr = ptr->next;
     }
