@@ -2,11 +2,7 @@
   "C_Cpp_Runner.cCompilerPath": "/usr/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "/usr/bin/g++",
   "C_Cpp_Runner.debuggerPath": "/usr/bin/gdb",
-  "C_Cpp_Runner.warnings": [
-    "-Wall",
-    "-Wextra",
-    "-Wpedantic"
-  ],
+  "C_Cpp_Runner.warnings": ["-Wall", "-Wextra", "-Wpedantic"],
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.includePaths": [],
   "C_Cpp_Runner.linkerArgs": [],
@@ -15,9 +11,9 @@
   "C_Cpp_Runner.excludeSearch": [],
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,
-  "editor.fontFamily": "JetBrainsMono, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrains Mono', '思源黑體',  'Courier New', monospace, Consolas",
   "editor.fontLigatures": true,
-  "editor.fontSize": 18,
+  "editor.fontSize": 20,
   "files.associations": {
     "iostream": "cpp"
   }
