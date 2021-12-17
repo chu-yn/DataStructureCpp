@@ -54,7 +54,9 @@ int main(void)
              << "]\tPath [" << ptr->val << "]" << endl;
         ptr = ptr->next;
     }
-
+    cout << "MST:" << endl;
+    mintree(head);
+    delete newnode;
     return 0;
 }
 
@@ -99,7 +101,7 @@ void mintree(node *head)
         {
             result = 0;
         }
-        if (result = 0)
+        if (result == 0)
             cout << "Top [" << mceptr->from << "]\tEnd ["
                  << mceptr->to << "]\tPath [" << mceptr->val << "]" << endl;
 
