@@ -15,5 +15,7 @@
   "C_Cpp_Runner.excludeSearch": [],
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,
+  "editor.fontFamily": "JetBrainsMono, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.fontSize": 18
 }

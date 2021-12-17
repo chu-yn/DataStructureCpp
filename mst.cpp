@@ -62,7 +62,7 @@ int main(void)
 
 node *findmincost(node *head)
 {
-    int minval = 100;
+    int minval = INT32_MAX;
     node *ptr, *retptr;
     ptr = head;
     while (ptr != nullptr)
