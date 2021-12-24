@@ -15,6 +15,8 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 20,
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "iomanip": "cpp"
   }
 }
