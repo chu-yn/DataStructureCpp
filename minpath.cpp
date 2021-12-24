@@ -11,7 +11,7 @@ int main()
             path[i][j] = 0;
 
     for (int i = 0; i < 12; i++)
-        path[data[i][0]][data[i][1]] = 1;
+        path[data[i][0]][data[i][1]] = data[i][2];
 
     cout << "Path" << endl;
     cout << " ";
@@ -23,7 +23,7 @@ int main()
         cout << i << " ";
         for (int j = 1; j < 8; j++)
         {
-            cout << "[" << path[i][j] << "]";
+            cout << " " << path[i][j] << " ";
         }
         cout << endl;
     }
