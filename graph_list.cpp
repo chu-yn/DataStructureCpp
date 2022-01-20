@@ -5,7 +5,7 @@ class list
 public:
     int val;
     list *next;
-    list() { next = NULL; }
+    list() { next = nullptr; }
 };
 
 int main(void)
@@ -39,7 +39,7 @@ int main(void)
             {
                 newnode = new list;
                 newnode->val = data[j][1];
-                while (ptr->next != NULL)
+                while (ptr->next != nullptr)
                     ptr = ptr->next;
                 ptr->next = newnode;
                 cout << "[" << newnode->val << "]";
